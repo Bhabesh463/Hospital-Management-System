@@ -14,6 +14,10 @@ public class Patient {
     }
     public void addPatient(){
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1cc71c6 (add the required file)
     }
 
 }
