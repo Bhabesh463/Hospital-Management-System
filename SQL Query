@@ -1,0 +1,34 @@
+MYSQL QUERY FOR CREATING TABLE
+
+create database hospital;
+use hospital;
+Create table patients(
+id INT auto_increment primary key,
+name VARCHAR(255) Not Null,
+age INT Not Null,
+gender VARCHAR(10) Not Null
+);
+select * from patients; 
+
+Create table DOCTORS(
+id int auto_increment primary key,
+name varchar(255) not null,
+specialization varchar(255) not null
+
+);
+
+create table APPOINTMENTS(
+id int auto_increment primary key,
+patient_id int not null,
+doctor_id int not null,
+appointment_date DATE not null,
+foreign key(patient_id) references patients(id),
+foreign key(doctor_id) references DOCTORS(id)
+);
+
+
+
+INSERT into DOCTORS(name , specialization) values ('pradeep singh' , 'Physician');
+INSERT into DOCTORS(name , specialization) values ('Abhinandan' , 'dermatologist');
+
+select * From Doctors;
